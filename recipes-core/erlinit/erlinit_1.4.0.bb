@@ -27,6 +27,10 @@ do_install() {
         install -m 0644 ${WORKDIR}/erlinit.config ${D}/${sysconfdir}/erlinit.config
 }
 
+inherit update-alternatives
+
+ALTERNATIVE_PRIORITY[init] = "500"
+
 FILES_${PN} = "${base_sbindir} ${sysconfdir}"
 FILES_${PN}-dbg += "/.debug"
 
