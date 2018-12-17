@@ -7,11 +7,15 @@ PRIORITY = "optional"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=ff253ad767462c46be284da12dda33e8"
 
-SRC_URI = "https://github.com/erlang/otp/archive/OTP-${PV}.tar.gz"
-SRC_URI += "file://fix-wx-configure.patch"
-SRC_URI += "file://erlang-fix-build-issue-in-Yocto.patch"
+SRC_URI = "git://github.com/erlang/otp.git;protocol=https;branch=master"
+# SRC_URI += "file://fix-wx-configure.patch"
+SRC_URI += "file://erlang-fix-build-issue-in-yocto.patch"
 
-S = "${WORKDIR}/otp-OTP-${PV}"
+PV = "21.2"
+SRCREV = "3825199794da28d79b21052a2e69e2335921d55e"
+ERTS_VERSION = "10.1.3"
+
+S = "${WORKDIR}/git"
 
 PARALLEL_MAKE = ""
 

@@ -1,19 +1,6 @@
 include erlang.inc
-include erlang-19.0.inc
 
-inherit nativesdk
-
-# Only do a single package for NativeSDK that includes everything
-ERTS_VERSION = "8.0"
-PROVIDES+="${PN} "
-PACKAGES="${PN} "
-
-ALLOW_EMPTY_${PN}="1"
-DESCRIPTION_${PN}=""
-RDEPENDS_${PN} = "nativesdk-ncurses "
-FILES_${PN}+="${bindir} ${libdir}/erlang"
-
-DEPENDS = "erlang-native openssl ncurses"
+inherit native
 
 PR = "r0"
 
@@ -34,3 +21,4 @@ do_compile_prepend() {
 do_install_prepend() {
     export TARGET=${HOST_SYS}
 }
+
