@@ -3,12 +3,8 @@ DESCRIPTION = "rebar is a self-contained Erlang script, so it's easy to distribu
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=ff253ad767462c46be284da12dda33e8"
 
+SRC_URI = "git://github.com/erlang/rebar3;branch=master"
 S = "${WORKDIR}/git"
-SRCREV = "80f6be689d882480ef5e7d272d2d598704a29f7d"
-PV = "3.1.1-git${SRCPV}"
-PR = "r0"
-
-SRC_URI = "git://github.com/rebar/rebar3;branch=master"
 
 DEPENDS += "erlang-native"
 
@@ -17,12 +13,11 @@ do_compile () {
 }
 
 do_install() {
-        install -d 0755 ${D}/${bindir}
-	install -m 0755 ${S}/rebar3 ${D}/${bindir}/rebar3
+    install -d 0755 ${D}/${bindir}
+    install -m 0755 ${S}/rebar3 ${D}/${bindir}/rebar3
 }
 
-FILES_${PN} = "${bindir}"
+FILES_${PN} = "${bindir}/rebar3"
 FILES_${PN}-dbg += "/.debug"
 
 BBCLASSEXTEND = "native nativesdk"
-
