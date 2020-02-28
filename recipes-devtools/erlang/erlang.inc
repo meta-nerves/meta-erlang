@@ -8,9 +8,10 @@ LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=ff253ad767462c46be284da12dda33e8"
 DEPENDS = "ncurses zlib"
 DEPENDS_append_class-native = " ncurses-native openssl-native"
 
-SRC_URI = "git://github.com/erlang/otp;branch=master"
-SRC_URI += "file://fix-wx-configure.patch"
-SRC_URI += "file://erlang-fix-build-issue-in-Yocto.patch"
+SRC_URI = "git://github.com:/erlang/otp;branch=master"
+#SRC_URI = "https://github.com/erlang/otp.git;branch=master"
+#SRC_URI += "file://fix-wx-configure.patch"
+#SRC_URI += "file://erlang-fix-build-issue-in-Yocto.patch"
 
 S = "${WORKDIR}/git"
 
