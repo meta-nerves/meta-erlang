@@ -1,19 +1,16 @@
 DESCRIPTION = "A dynamic programming language and runtime environment, \
 with built-in support for concurrency, distribution and fault tolerance"
 SECTION = "devel/erlang"
-DEPENDS = "ncurses zlib"
-DEPENDS_append_class-native = " ncurses-native openssl-native"
 PRIORITY = "optional"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=ff253ad767462c46be284da12dda33e8"
 
-SRC_URI = "git://github.com/erlang/otp.git;protocol=https;branch=master"
-# SRC_URI += "file://fix-wx-configure.patch"
-SRC_URI += "file://erlang-fix-build-issue-in-yocto.patch"
+DEPENDS = "ncurses zlib"
+DEPENDS_append_class-native = " ncurses-native openssl-native"
 
-PV = "21.2"
-SRCREV = "3825199794da28d79b21052a2e69e2335921d55e"
-ERTS_VERSION = "10.1.3"
+SRC_URI = "git://github.com/erlang/otp;branch=master"
+SRC_URI += "file://fix-wx-configure.patch"
+SRC_URI += "file://erlang-fix-build-issue-in-Yocto.patch"
 
 S = "${WORKDIR}/git"
 
