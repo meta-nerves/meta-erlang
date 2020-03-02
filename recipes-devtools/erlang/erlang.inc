@@ -10,8 +10,8 @@ DEPENDS_append_class-native = " ncurses-native openssl-native"
 
 SRC_URI = "git://github.com:/erlang/otp;branch=master"
 #SRC_URI = "https://github.com/erlang/otp.git;branch=master"
-#SRC_URI += "file://fix-wx-configure.patch"
-#SRC_URI += "file://erlang-fix-build-issue-in-Yocto.patch"
+SRC_URI += "file://fix-wx-configure.patch"
+SRC_URI += "file://erlang-fix-build-issue-in-yocto.patch"
 
 S = "${WORKDIR}/git"
 
