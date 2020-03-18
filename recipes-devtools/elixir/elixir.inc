@@ -1,5 +1,6 @@
 DESCRIPTION = "Elixir is a dynamic, functional language designed for building \
 scalable and maintainable applications."
+SUMMARY = "Elixir functional language for building scalable and maintainable applications"
 SECTION = "devel/elixir"
 PRIORITY = "optional"
 LICENSE = "Apache-2.0"
