@@ -6,7 +6,7 @@ require erlang-${PV}-manifest.inc
 
 PR = "r0"
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/files/22.2:"
+FILESEXTRAPATHS_prepend := "${THISDIR}/files/22.3:"
 
 PACKAGECONFIG ??= ""
 

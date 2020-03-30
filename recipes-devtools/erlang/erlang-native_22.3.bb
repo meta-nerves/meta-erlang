@@ -5,7 +5,7 @@ inherit native
 
 PR = "r0"
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/files/22.2:"
+FILESEXTRAPATHS_prepend := "${THISDIR}/files/22.3:"
 
 EXTRA_OECONF = "--with-ssl=${STAGING_DIR_NATIVE}"
 
