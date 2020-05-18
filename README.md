@@ -75,6 +75,7 @@ Or add ```IMAGE_INSTALL_append = " erlang"``` in conf/local.conf and run
 
 ### Erlang
 
+ * 23.0
  * 22.3
  * 22.2.8
  * 22.1.8
